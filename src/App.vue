@@ -1,17 +1,48 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+
+    <div class="w-full px-40 pb-20">
+        <div
+            class="flex flex-wrap -mx-2"
+            data-cy="leave-calendar"
+        >
+          <calendar-month
+              v-for="(month, index) in months"
+              :key="'cal' + month.format('-MM-YYYY')"
+              :month="month"
+              :month-number="index + 1"
+          />
+        </div>
+    </div>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import CalendarMonth from "./components/CalendarMonth";
+import moment from 'moment-timezone'
 
 export default {
   name: 'App',
+
   components: {
-    HelloWorld
+    CalendarMonth,
+  },
+
+  computed: {
+
+    months() {
+      let start = moment.utc("2021-01-01")
+      const end = moment.utc("2021-12-31")
+      let months = []
+
+      while (start.isBefore(end) || start.format('M') === end.format('M')) {
+        months.push(start.clone())
+        start.add(1, 'month')
+      }
+
+      return months
+    },
+
   }
 }
 </script>

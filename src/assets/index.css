@@ -1,0 +1,45 @@
+/* ./src/index.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.fc-theme-standard td.fc-day-today,
+.fc-theme-standard th,
+.fc-theme-standard td,
+.fc-theme-standard thead,
+.fc-theme-standard tbody,
+.fc-theme-standard .fc-divider,
+.fc-theme-standard .fc-row,
+.fc-theme-standard .fc-event-main,
+.fc-theme-standard .fc-popover,
+.fc-theme-standard .fc-list-view,
+.fc-theme-standard .fc-list-heading td {
+    border: none;
+    border-style: none;
+}
+
+.fc .fc-day-disabled {
+    background: transparent;
+}
+
+.fc .fc-daygrid-day-top {
+    justify-content: center;
+}
+
+.fc .fc-daygrid-body-unbalanced .fc-daygrid-day-events {
+    min-height: 0;
+}
+
+ .fc-daygrid-day.fc-day {
+    height: 30px !important;
+}
+
+
+.fc .fc-daygrid-day-number {
+    padding: 4px 2px;
+}
+
+.fc .fc-daygrid-day-frame {
+    height: 3px !important;
+}
