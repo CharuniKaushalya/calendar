@@ -4,28 +4,6 @@
       ref="fullCalendar"
       :options="calendarOptions"
   >
-<!--    <template v-slot:slotLabelContent="arg">-->
-<!--      <date-time-label :arg="arg" />-->
-<!--    </template>-->
-<!--    <template v-slot:resourceLabelContent="arg">-->
-<!--      <employment-->
-<!--          :compact="true"-->
-<!--          :employment="{ id: arg.resource.id, ...arg.resource.extendedProps }"-->
-<!--      />-->
-<!--    </template>-->
-<!--    <template v-slot:eventContent="arg">-->
-<!--      <event-component-->
-<!--          :arg="arg"-->
-<!--          @edit-leave="leave => $emit('edit-leave', leave)"-->
-<!--          @destroy-leave="leave => $emit('destroy-leave', leave)"-->
-<!--      />-->
-<!--    </template>-->
-<!--    <template-->
-<!--        v-if="isResourceAreaHeaderContentEnabled"-->
-<!--        v-slot:resourceAreaHeaderContent-->
-<!--    >-->
-<!--      <add-employment />-->
-<!--    </template>-->
  </FullCalendar>
 </template>
 
