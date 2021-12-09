@@ -14,6 +14,7 @@
 .fc-theme-standard .fc-event-main,
 .fc-theme-standard .fc-popover,
 .fc-theme-standard .fc-list-view,
+.fc-theme-standard .fc-scrollgrid,
 .fc-theme-standard .fc-list-heading td {
     border: none;
     border-style: none;
@@ -41,5 +42,31 @@
 }
 
 .fc .fc-daygrid-day-frame {
-    height: 3px !important;
+    font-size: 10px;
+    color: #97A0AF;
+    min-height: 0;
+    height: 30px;
+}
+
+.fc-daygrid-day-top {
+    border-radius: 10%;
+}
+
+.fc .fc-daygrid-day-frame .test-event {
+                                color: rebeccapurple;
+}
+
+.fc-daygrid-day-top {
+    height: 24px;
+    background-color:  #edf2f7;
+    margin: 0 4px;
+}
+
+.fc-h-event {
+    border: none;
+    background-color: transparent;
+}
+
+.fc-daygrid-day-events {
+    height: 0;
 }

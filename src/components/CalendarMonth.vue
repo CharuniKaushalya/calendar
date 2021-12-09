@@ -4,7 +4,7 @@
           class="bg-white border border-2 border-gray-300 overflow-hidden my-leave-calendar"
       >
         <div
-            class="pt-1 px-2 text-xl font-bold flex justify-end"
+            class="mb-4 pt-1 px-2 text-xs text-gray-400 leading-6 flex justify-end"
             v-text="month.format('MMM')"
         />
         <calendar
@@ -46,12 +46,49 @@ export default {
     },
 
     calendarEvents() {
-      return []
+      return [
+        {
+          id: 'a',
+          title: 'my event',
+          start: '2021-01-11 00:00:00',
+          end: '2021-01-14 23:00:00',
+          textColor: 'red',
+          classNames: ['test-event'],
+          type: 'blue'
+        },
+        {
+          id: 'b',
+          title: 'my event 02',
+          start: '2021-02-22 00:00:00',
+          end: '2021-02-25 23:00:00',
+          textColor: 'red',
+          classNames: ['test-event'],
+          type: 'purple'
+        },
+        {
+          id: 'c',
+          title: 'my event 02',
+          start: '2021-05-10 00:00:00',
+          end: '2021-05-14 23:00:00',
+          textColor: 'red',
+          classNames: ['test-event'],
+          type: 'blue'
+        },
+        {
+          id: 'd',
+          title: 'my event 02',
+          start: '2021-05-17 00:00:00',
+          end: '2021-05-21 23:00:00',
+          textColor: 'red',
+          classNames: ['test-event'],
+          type: 'blue'
+        }
+      ]
     },
 
     calendarConfig() {
       return {
-        contentHeight: 250,
+        contentHeight: 180,
         eventOverlap: false,
         fixedWeekCount: false,
         showNonCurrentDates: false,

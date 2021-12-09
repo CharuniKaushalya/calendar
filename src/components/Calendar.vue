@@ -4,6 +4,11 @@
       ref="fullCalendar"
       :options="calendarOptions"
   >
+  <template v-slot:eventContent="arg">
+      <event-component
+        :arg="arg"
+      />
+    </template>
  </FullCalendar>
 </template>
 
@@ -11,12 +16,14 @@
 import dayGridPlugin from '@fullcalendar/daygrid'
 import { defaultsDeep } from 'lodash-es'
 import FullCalendar from '@fullcalendar/vue'
+import EventComponent from "./event-component";
 
 
 export default {
   name: "Calendar",
 
   components: {
+    EventComponent,
     FullCalendar
   },
 
@@ -66,6 +73,8 @@ export default {
       return {
         timeZone: 'UTC',
         headerToolbar: this.header,
+        dayHeaders: false,
+        eventTextColor: 'rgba(59, 130, 246, 0.5)',
         events: this.events,
         selectable: this.selectable,
         plugins: [dayGridPlugin],
